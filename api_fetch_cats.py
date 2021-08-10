@@ -1,4 +1,5 @@
 import sys
+import ast
 from PySide6 import QtCore, QtWidgets, QtNetwork
 
 class MyWidget(QtWidgets.QWidget):
@@ -21,7 +22,7 @@ class MyWidget(QtWidgets.QWidget):
     self.button.clicked.connect(self.get_fact)
 
   # Create slot for a function next to it, that lets the function
-  # to work as a callback function somewhere 
+  # to work as a callback function 
   # (https://doc.qt.io/qt-5/signalsandslots.html)
   @QtCore.Slot()
   def get_fact(self):
@@ -37,8 +38,12 @@ class MyWidget(QtWidgets.QWidget):
     err = reply.error()
 
     if err == QtNetwork.QNetworkReply.NoError:
-      #self.text.setText(reply)
-      print(reply)
+      # Read the reply string (b'), take data from it, decode the data as a utf-8 string
+      reply_str = reply.readAll().data().decode("utf-8")
+      # Convert a string to a dictionary
+      reply_dict = ast.literal_eval(reply_str)
+      # Change text in the text field
+      self.text.setText(reply_dict['fact'])
 
     else:
       print("Error occured: ", err)
