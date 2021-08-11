@@ -1,6 +1,6 @@
 import sys
 import ast
-from PySide6 import QtCore, QtWidgets, QtNetwork
+from PyQt5 import QtCore, QtWidgets, QtNetwork
 
 class MyWidget(QtWidgets.QWidget):
 
@@ -11,7 +11,7 @@ class MyWidget(QtWidgets.QWidget):
     # Add Button
     self.button = QtWidgets.QPushButton("Get a fact!")
     # Add text Label alligned at the window center
-    self.text = QtWidgets.QLabel("Click a button to get a random fact about cats", 
+    self.text = QtWidgets.QLabel("Click a button to get a random fact about cats",
                                   alignment=QtCore.Qt.AlignCenter)
 
     # Create layout for widgets, 'V' means 'align vertically'
@@ -22,7 +22,7 @@ class MyWidget(QtWidgets.QWidget):
     self.button.clicked.connect(self.get_fact)
 
   # Create slot for a function next to it, that lets the function
-  # to work as a callback function 
+  # to work as a callback function
   # (https://doc.qt.io/qt-5/signalsandslots.html)
   @QtCore.Slot()
   def get_fact(self):
