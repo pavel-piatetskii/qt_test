@@ -1,0 +1,4 @@
+TRANSLATIONS = appLang_CN.ts\
+               appLang_EN.ts
+
+SOURCES += ./ui/LangTestUI.py
