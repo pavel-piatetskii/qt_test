@@ -19,14 +19,20 @@
    </property>
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>130</y>
-     <width>91</width>
-     <height>21</height>
+     <x>0</x>
+     <y>120</y>
+     <width>401</width>
+     <height>20</height>
     </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>please_click_left</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
  </widget>

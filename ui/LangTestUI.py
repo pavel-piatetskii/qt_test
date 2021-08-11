@@ -17,7 +17,9 @@ class Ui_Form(object):
         Form.resize(400, 300)
         self.label = QtWidgets.QLabel(Form)
         self.label.setEnabled(True)
-        self.label.setGeometry(QtCore.QRect(160, 130, 91, 21))
+        self.label.setGeometry(QtCore.QRect(0, 120, 401, 20))
+        self.label.setAutoFillBackground(False)
+        self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
 
         self.retranslateUi(Form)
