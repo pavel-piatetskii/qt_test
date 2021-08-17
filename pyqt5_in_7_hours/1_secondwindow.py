@@ -9,7 +9,7 @@ class WindowExample(QWidget):
 
         self.setGeometry(200, 200, 400, 300)
         self.setWindowTitle("Second sample app")
-        self.setWindowIcon(QIcon('icon_for_2nd.png'))
+        self.setWindowIcon(QIcon('1_icon_for_2nd.png'))
 
         # Prohibit resizing
         # self.setFixedWidth(400)
