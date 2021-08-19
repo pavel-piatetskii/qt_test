@@ -20,7 +20,7 @@ class Window(QWidget):
         for i in range(0, 8):
             btn = QPushButton(f"Click {i+1}")
 
-            # Proper way to create connect to a function inside a loop
+            # Proper way to create connection to a function inside a loop
             # k stores the value of i at the moment of creation
             # if i is not declared as argument, k will always be 1
             # if only i is used, without k, function will output only the last i in the loop
